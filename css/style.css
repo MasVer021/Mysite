@@ -215,6 +215,7 @@ a:hover
     #div-content img
     {
         visibility: visible;
+        height: auto;
         width : clamp(100px, 10vw, 1000px);
         padding : 0;
         margin-left : auto;
