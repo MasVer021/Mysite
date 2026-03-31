@@ -122,8 +122,8 @@ a:hover
 
 #div-content img
 {
-    visibility: collapse;
-    height: auto;
+    visibility: hidden;
+    height: 0;
 }
 
 
