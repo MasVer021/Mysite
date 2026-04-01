@@ -67,7 +67,7 @@ a
 
 .div-content img
 {
-    width : clamp(100px, 12vw, 2000px);
+    width : clamp(100px, 12vw, 1300px);
 
     padding : 0;
 
@@ -82,17 +82,15 @@ a
     transform: translate(-50%,+50%);
 }
 
-
-
-.div-content p:first-of-type
+.div-content h2:first-of-type
 {
     font-size: 2.5em;
-    font-weight: 1000;
+    font-weight: 800;
     text-align: center;
 
 }
 
-.div-content p, .div-content a
+.div-content h2, .div-content a,.div-content p
 {
     margin:0;
 }
@@ -137,7 +135,7 @@ a
     margin: 10px;
     border-radius: 0.5em;
 
-    font-weight: 1200;
+    font-weight: 1000;
 }
 
 #email
