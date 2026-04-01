@@ -2,8 +2,15 @@ body
 {
     background-color: #EFEFE2;
     font-family: "Oswald", sans-serif;
-    margin-top:0;
+    text-align: justify;
+}
 
+a
+{
+    margin: 0 1vw;
+    text-decoration :none;
+    color: black;
+    border-bottom: 4px solid transparent;
 }
 
 .menu
@@ -17,35 +24,27 @@ body
     font-size: clamp(1.5rem, 2vw, 4rem);
 }
 
-.image-menu
+.menu img
 {
-    visibility: collapse;
+    height: clamp(1.5rem, 2vw, 4rem);
 }
 
-.image-menu img
+.menu a:nth-child(4)
 {
-    height: 0;
+    margin-left:auto;
 }
 
-a
-{
-    margin: 10px;
-    text-decoration :none;
-    color: black;
-    border-bottom: 4px solid transparent;
-}
 
-a:hover
+.menu a:hover
 {
-    position: relative;
-    bottom: 10px;
+    transform: translateY(-10px);
     color: #CAA9F0;
     border-color: #FF612F;
 }
 
-#div-content
+.div-content
 {
-    border : 6px solid black;
+    border : 0.4em solid black;
     width : 80vw;
     height : auto;
     aspect-ratio: 16 / 10;
@@ -53,140 +52,113 @@ a:hover
     margin : 10% auto;
     padding: 15px;
 
-    border-radius: 20px;
+    border-radius: 1em;
     box-shadow: 0.7em 0.7em 0 black;
 
+
     background-color: #FFC52F;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
     font-weight: bold;
-    font-size: clamp(1.5rem, 2vw, 3rem);
 
+    font-size: clamp(1.5rem, 2vw, 4rem);
     position: relative;
 
 }
 
-#div-about
+.div-content img
 {
-    border : 6px solid black;
-    width : 80vw;
-    height : auto;
-    aspect-ratio: 16 / 10;
+    width : clamp(100px, 12vw, 2000px);
 
-    margin : 10% auto;
-    padding: 10px;
+    padding : 0;
 
-    border-radius: 20px;
-    box-shadow: 0.7em 0.7em 0 black;
+    border : 0.4em solid black;
+    border-radius: 50%;
 
-    background-color: #FFC52F;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
 
-    font-weight: bold;
+    left : 100%;
+    bottom: 100%;
+
+    transform: translate(-50%,+50%);
+}
+
+
+
+.div-content p:first-of-type
+{
+    font-size: 2.5em;
+    font-weight: 1000;
+    text-align: center;
+
+}
+
+.div-content p, .div-content a
+{
+    margin:0;
+}
+
+.div-content form
+{
+    margin-top: 0.8em;
+}
+
+.div-content button
+{
+    width: 90%;
+    background-color: #ffd52f;
+    box-shadow: 0.3em 0.3em 0 black;
+
+    margin: 15px;
     font-size: clamp(1.5rem, 2vw, 3rem);
+    border: 0.1em solid black;
+}
 
-    position: relative;
+.div-content button:active
+{
+
+    background-color: black;
+    color: white;
+    box-shadow: none;
+}
+
+.div-content li
+{
+    margin-bottom: 0.8em;
 }
 
 #nome
 {
-    border : 3px solid black;
+    border : 0.2em solid black;
     width : 90%;
     height : auto;
     aspect-ratio: 3 / 1;
 
     background-color: #EFEFE2;
     margin: 10px;
-    border-radius: 10px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 0.5em;
 
     font-weight: 1200;
-
-}
-
-#div-content p:first-of-type
-{
-    font-size: 2.5em;
-    font-weight: 1000;
-    margin:0;
-}
-
-#div-content img
-{
-    visibility: hidden;
-    height: 0;
-}
-
-
-#div-content-about
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-
-#div-content button
-{
-    width: 100%;
-    background-color: #ffd52f;
-    box-shadow: 0.3em 0.3em 0 black;
-
-
-    font-size: clamp(1.5rem, 2vw, 3rem);
-    border : none
-}
-
-#div-content form
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#div-content a
-{
-   margin:0;
 }
 
 #email
 {
-
     width: clamp(20rem, 30vw, 40rem);
     text-align: center;
-
     font-size: clamp(1.5rem, 2vw, 3rem);
-
 }
 
-#div-content button:active
+.no-su-mobile
 {
-
-    box-shadow: none;
+    display: none;
 }
 
-#lista-content-about li
+.centra-colonna
 {
-    margin : 20px 0;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-
-
-
-
-
 
 @media (min-width: 1024px)
 {
@@ -195,39 +167,14 @@ a:hover
         justify-content: start;
     }
 
-    .image-menu
+    .no-su-mobile
     {
-        visibility: visible;
-        margin-left: auto;
+        display: initial;
     }
 
-    .image-menu img
-    {
-        height: clamp(1.5rem, 2vw, 4rem);
-        width:auto;
-    }
-
-    #div-content
+    .div-content
     {
         width : 50vw;
-    }
-
-    #div-content img
-    {
-        visibility: visible;
-        height: auto;
-        width : clamp(100px, 10vw, 1000px);
-        padding : 0;
-        margin-left : auto;
-
-        border : 5px solid black;
-        border-radius: 50%;
-
-        display: inline-block;
-        position: absolute;
-
-        left : 90%;
-        bottom: 90%;
     }
 
 }
