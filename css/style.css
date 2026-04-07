@@ -1,6 +1,17 @@
+:root
+{
+    --primary-bg-color: #EFEFE2;
+    --secondary-bg-color: #FFC52F;
+    --primary-color: black;
+    --border-color: black;
+    --shadow-color:black;
+}
+
+
+
 body
 {
-    background-color: #EFEFE2;
+    background-color: var(--primary-bg-color);
     font-family: "Oswald", sans-serif;
     text-align: justify;
 }
@@ -9,7 +20,7 @@ a
 {
     margin: 0 1vw;
     text-decoration :none;
-    color: black;
+    color: var(--primary-color);
     border-bottom: 4px solid transparent;
 }
 
@@ -38,13 +49,14 @@ a
 .menu a:hover
 {
     transform: translateY(-10px);
+    transition: .5s;
     color: #CAA9F0;
     border-color: #FF612F;
 }
 
 .div-content
 {
-    border : 0.4em solid black;
+    border : 0.4em solid var(--border-color);
     width : 80vw;
     height : auto;
     aspect-ratio: 16 / 10;
@@ -53,10 +65,10 @@ a
     padding: 15px;
 
     border-radius: 1em;
-    box-shadow: 0.7em 0.7em 0 black;
+    box-shadow: 0.7em 0.7em 0 var(--shadow-color);
 
 
-    background-color: #FFC52F;
+    background-color: var(--secondary-bg-color);
 
     font-weight: bold;
 
@@ -71,7 +83,7 @@ a
 
     padding : 0;
 
-    border : 0.4em solid black;
+    border : 0.4em solid var(--border-color);
     border-radius: 50%;
 
     position: absolute;
@@ -103,12 +115,12 @@ a
 .div-content button
 {
     width: 90%;
-    background-color: #ffd52f;
-    box-shadow: 0.3em 0.3em 0 black;
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0.3em 0.3em 0 var(--shadow-color);
 
     margin: 15px;
     font-size: clamp(1.5rem, 2vw, 3rem);
-    border: 0.1em solid black;
+    border: 0.1em solid var(--border-color);
 }
 
 .div-content button:active
@@ -126,12 +138,12 @@ a
 
 #nome
 {
-    border : 0.2em solid black;
+    border : 0.2em solid var(--border-color);
     width : 90%;
     height : auto;
     aspect-ratio: 3 / 1;
 
-    background-color: #EFEFE2;
+    background-color: var(--primary-bg-color);
     margin: 10px;
     border-radius: 0.5em;
 
